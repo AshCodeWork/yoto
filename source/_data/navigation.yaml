@@ -5,28 +5,117 @@
     "path": "index.html"
   },
   "main": [
+    # {
+    #   "text": "SWAGGER",
+    #   "type": "label"
+    # },
+    # {
+    #   "text": "UI",
+    #   "type": "link",
+    #   "path": "swagger/ui.html"
+    # },
+    # {
+    #   "text": "To HTML",
+    #   "type": "link",
+    #   "path": "swagger/to-html.html"
+    # },
+    # {
+    #   "text": "SUPPORT AND FEEDBACK",
+    #   "type": "label"
+    # },
+    # {
+    #   "text": "Raise an Issue on Github",
+    #   "type": "link",
+    #   "path": "https://github.bus.zalan.do/stargate/hexo-stargate-doc-theme-seed/issues/new"
+    # }
     {
-      "text": "SWAGGER",
-      "type": "label"
+      "text": "欢迎使用Yoto",
+      "type": "label",
+      "children": [
+        {
+          "text": "介绍",
+          "type": "link",
+          "path": "introduce/index.html"
+        },
+        {
+          "text": "关于",
+          "type": "link",
+          "path": "introduce/about.html"
+        },
+      ]
     },
     {
-      "text": "UI",
-      "type": "link",
-      "path": "swagger/ui.html"
+      "text": "全局js",
+      "type": "label",
+      "link": "global-js/index.html",
+      "children": [
+        {
+          "text": "window上的全局方法",
+          "type": "link",
+          "path": "global-js/window.html"
+        },
+        {
+          "text": "vue上的全局方法",
+          "type": "link",
+          "path": "global-js/vue.html"
+        },
+      ]
     },
     {
-      "text": "To HTML",
-      "type": "link",
-      "path": "swagger/to-html.html"
+      "text": "request请求",
+      "type": "label",
+      "link": "request/index.html",
+      "children": [
+        {
+          "text": "get请求",
+          "type": "link",
+          "path": "request/get.html"
+        },
+        {
+          "text": "post请求",
+          "type": "link",
+          "path": "request/post.html"
+        },
+        {
+          "text": "proxy代理设置",
+          "type": "link",
+          "path": "request/proxy.html"
+        },
+      ]
     },
     {
-      "text": "SUPPORT AND FEEDBACK",
-      "type": "label"
+      "text": "全局样式",
+      "type": "label",
+      "link": "style/index.html",
+      "children": [
+        {
+          "text": "global样式",
+          "type": "link",
+          "path": "style/global.html"
+        },
+        {
+          "text": "flex样式",
+          "type": "link",
+          "path": "style/flex.html"
+        },
+        {
+          "text": "尺寸样式",
+          "type": "link",
+          "path": "style/size.html"
+        },
+      ]
     },
     {
-      "text": "Raise an Issue on Github",
-      "type": "link",
-      "path": "https://github.bus.zalan.do/stargate/hexo-stargate-doc-theme-seed/issues/new"
-    }
+      "text": "UI组件",
+      "type": "label",
+      "link": "ui-components/index.html",
+      "children": [
+        # {
+        #   "text": "window上的全局方法",
+        #   "type": "link",
+        #   "path": "ui-components/window.html"
+        # },
+      ]
+    },
   ]
 }
