@@ -17,7 +17,7 @@ relative_link: false
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: ../themes/hexo-theme-doc
+theme: ../node_modules/hexo-theme-doc
 
 theme_config:
   favicon: images/favicon.ico
@@ -25,3 +25,5 @@ theme_config:
 ignore:
   # development only: ignore sub node_modules when `npm link hexo-theme-doc`
   - '**/node_modules/**/*node_modules'
+
+root: ./
