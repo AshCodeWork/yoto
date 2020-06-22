@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+
+    <title>hexo-theme-doc-seed | 介绍 </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"介绍","path":"introduce/index.html"},"data":{"navigation":{"logo":{"text":"Hexo Doc Theme Seed","type":"link","path":"index.html"},"main":[{"text":"欢迎使用Yoto","type":"label","children":[{"text":"介绍","type":"link","path":"introduce/index.html"},{"text":"关于","type":"link","path":"introduce/about.html"}]},{"text":"全局js","type":"label","link":"global-js/index.html","children":[{"text":"window上的全局方法","type":"link","path":"global-js/window.html"},{"text":"vue上的全局方法","type":"link","path":"global-js/vue.html"}]},{"text":"request请求","type":"label","link":"request/index.html","children":[{"text":"get请求","type":"link","path":"request/get.html"},{"text":"post请求","type":"link","path":"request/post.html"},{"text":"proxy代理设置","type":"link","path":"request/proxy.html"}]},{"text":"全局样式","type":"label","link":"style/index.html","children":[{"text":"global样式","type":"link","path":"style/global.html"},{"text":"flex样式","type":"link","path":"style/flex.html"},{"text":"尺寸样式","type":"link","path":"style/size.html"}]},{"text":"UI组件","type":"label","link":"ui-components/index.html","children":[]}]}},"config":{"timezone":"UTC","root":"/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Hexo Doc Theme Seed</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>项目初衷：这个项目是用于快速构建pc项目的，面对新项目的创建，我们希望在文档上有个统一的说明，开发的时候有个统一的工具。比如：项目中我们需要<code>axios</code>，需要使用拦截器进行进一步的封装，对新手来说是费时费力的，我希望在一开始这些基础功能就存在，免去重新搭建项目的麻烦，也统一了项目结构便于维护。</p>
+<p>整个项目基于<code>vue-cli 4.x</code>的版本。添加了一些必备插件，新的vue-cli 拥有更多新的功能。</p>
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><blockquote>
+<p>关于vue-cli旧版本</p>
+</blockquote>
+<p>Vue CLI 的包名称由 vue-cli 改成了 @vue/cli。 如果你已经全局安装了旧版本的 vue-cli (1.x 或 2.x)，你需要先通过 npm uninstall vue-cli -g 或 yarn global remove vue-cli 卸载它。</p>
+<blockquote>
+<p>Node 版本要求</p>
+</blockquote>
+<p>Vue CLI 需要 <code>Node.js 8.9</code> 或更高版本 (推荐 8.11.0+)。你可以使用 <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">nvm</a> 或 <a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="noopener">nvm-windows</a> 在同一台电脑中管理多个 Node 版本。</p>
+<p><a href="https://cli.vuejs.org/zh/guide/prototyping.html" target="_blank" rel="noopener">vue-cli 的文档说明</a></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>由于是公司内部项目，项目请从公司wiki下载：<br><a href="https://wiki.miaomore.cn/pages/viewpage.action?pageId=42054476" target="_blank" rel="noopener">项目下载</a></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>进入项目根路径执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>如果有报错，请联系项目负责人刘鑫</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>本地运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+<p>开发环境构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build:dev</span><br></pre></td></tr></table></figure>
+<p>测试环境构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build:test</span><br></pre></td></tr></table></figure>
+<p>线上环境构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build:prod</span><br></pre></td></tr></table></figure>
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/script/doc.js"></script>
+
+    
+
+  </body>
+</html>

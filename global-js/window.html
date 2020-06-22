@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+
+    <title>hexo-theme-doc-seed | window上的工具js </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"window上的工具js","path":"global-js/window.html"},"data":{"navigation":{"logo":{"text":"Hexo Doc Theme Seed","type":"link","path":"index.html"},"main":[{"text":"欢迎使用Yoto","type":"label","children":[{"text":"介绍","type":"link","path":"introduce/index.html"},{"text":"关于","type":"link","path":"introduce/about.html"}]},{"text":"全局js","type":"label","link":"global-js/index.html","children":[{"text":"window上的全局方法","type":"link","path":"global-js/window.html"},{"text":"vue上的全局方法","type":"link","path":"global-js/vue.html"}]},{"text":"request请求","type":"label","link":"request/index.html","children":[{"text":"get请求","type":"link","path":"request/get.html"},{"text":"post请求","type":"link","path":"request/post.html"},{"text":"proxy代理设置","type":"link","path":"request/proxy.html"}]},{"text":"全局样式","type":"label","link":"style/index.html","children":[{"text":"global样式","type":"link","path":"style/global.html"},{"text":"flex样式","type":"link","path":"style/flex.html"},{"text":"尺寸样式","type":"link","path":"style/size.html"}]},{"text":"UI组件","type":"label","link":"ui-components/index.html","children":[]}]}},"config":{"timezone":"UTC","root":"/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/index.html" class="doc-navbar__logo"><img src="/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Hexo Doc Theme Seed</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="window上的工具js"><a href="#window上的工具js" class="headerlink" title="window上的工具js"></a>window上的工具js</h1><h2 id="window-Global"><a href="#window-Global" class="headerlink" title="window.Global"></a>window.Global</h2><h3 id="window-Global-env"><a href="#window-Global-env" class="headerlink" title="window.Global.env"></a>window.Global.env</h3><p>用法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.Global.env</span><br></pre></td></tr></table></figure></p>
+<p>返回当前的环境，来自环境变量<code>VUE_APP_ENV</code></p>
+<h3 id="window-Global-deviceType"><a href="#window-Global-deviceType" class="headerlink" title="window.Global.deviceType"></a>window.Global.deviceType</h3><p>用法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.Global.deviceType <span class="comment">//返回  1 苹果 2 安卓</span></span><br></pre></td></tr></table></figure></p>
+<p>返回当前的设备类型：1 苹果 2 安卓</p>
+<h2 id="开头的方法"><a href="#开头的方法" class="headerlink" title="$开头的方法"></a>$开头的方法</h2><h3 id="window-getHashUrlQuery"><a href="#window-getHashUrlQuery" class="headerlink" title="window.$getHashUrlQuery"></a>window.$getHashUrlQuery</h3><p>获取hash模式下的url参数值</p>
+<p>用法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// (name:string) =&gt; value:string</span></span><br><span class="line">win.$getHashUrlQuery(参数值)</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// url: https:wwww.miaohealth.net/#/detail?id=123</span></span><br><span class="line">win.$getHashUrlQuery(<span class="string">'id'</span>) <span class="comment">//123</span></span><br></pre></td></tr></table></figure>
+<h3 id="window-getUrlQuery"><a href="#window-getUrlQuery" class="headerlink" title="window.$getUrlQuery"></a>window.$getUrlQuery</h3><p>获取非hash下的url参数值</p>
+<p>用法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// (name:string) =&gt; value:string</span></span><br><span class="line">win.$getUrlQuery(参数值)</span><br></pre></td></tr></table></figure>
+<p>例如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// url: https:wwww.miaohealth.net/detail?id=123</span></span><br><span class="line">win.$getUrlQuery(<span class="string">'id'</span>) <span class="comment">//123</span></span><br></pre></td></tr></table></figure>
+<h3 id="window-timer"><a href="#window-timer" class="headerlink" title="window.$timer"></a>window.$timer</h3><p>自己封装的定时器。可以设置setInerval, setTimeout。可以获取当前已经使用这个方法开启的定时器</p>
+<h4 id="获取Inerval定时器的所有key"><a href="#获取Inerval定时器的所有key" class="headerlink" title="获取Inerval定时器的所有key"></a>获取Inerval定时器的所有key</h4><p>使用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// () =&gt; number[]</span></span><br><span class="line"><span class="built_in">window</span>.$timer.intervalKeys()</span><br></pre></td></tr></table></figure></p>
+<h4 id="获取Timeout定时器的所有key"><a href="#获取Timeout定时器的所有key" class="headerlink" title="获取Timeout定时器的所有key"></a>获取Timeout定时器的所有key</h4><p>使用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// () =&gt; number[]</span></span><br><span class="line"><span class="built_in">window</span>.$timer.timeoutKeys()</span><br></pre></td></tr></table></figure></p>
+<h3 id="设置setInterval定时器"><a href="#设置setInterval定时器" class="headerlink" title="设置setInterval定时器"></a>设置setInterval定时器</h3><p>使用方式同原生的一样，接受两个参数: 参数一：回掉方法，参数二，定时时长(ms)；返回这个定时器的key</p>
+<p>例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 每隔1s 打印123</span></span><br><span class="line"><span class="built_in">window</span>.$timer.setInterval(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>)</span><br><span class="line">&#125;, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="设置setTimeoutl定时器"><a href="#设置setTimeoutl定时器" class="headerlink" title="设置setTimeoutl定时器"></a>设置setTimeoutl定时器</h3><p>使用方式同原生的一样，接受两个参数: 参数一：回掉方法，参数二，定时时长(ms)；返回这个定时器的key</p>
+<p>例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1s 后打印123</span></span><br><span class="line"><span class="built_in">window</span>.$timer.setTimeout(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">123</span>)</span><br><span class="line">&#125;, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="清除timeout定时器"><a href="#清除timeout定时器" class="headerlink" title="清除timeout定时器"></a>清除<code>timeout</code>定时器</h3><p>清除所有使用<code>$timer</code>创建的timeout定时器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.$timer.clearTimeout()</span><br></pre></td></tr></table></figure>
+<h3 id="清除interval定时器"><a href="#清除interval定时器" class="headerlink" title="清除interval定时器"></a>清除<code>interval</code>定时器</h3><p>除所有使用<code>$timer</code>创建的interval定时器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.$timer.clearInterval()</span><br></pre></td></tr></table></figure>
+<h3 id="window-setCookie"><a href="#window-setCookie" class="headerlink" title="window.$setCookie"></a>window.$setCookie</h3><p>设置cookie<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* [setCookie description]</span></span><br><span class="line"><span class="comment">* <span class="doctag">@method <span class="variable">setCookie</span></span></span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>name Cookie键名</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>value Cookie键值</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;Int&#125;</span> </span>days Cookie有效期天数</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>path Cookie有效路径</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>domain Cookie有效域</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;Boolean&#125;</span> </span>secure 是否安全Cookie</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">window</span>.$setCookie(name, value, days, path, domain, secure)</span><br></pre></td></tr></table></figure></p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置.miaoehealth.net域名下的key 为name，值为123的cookie，有效期10天</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.$setCookie(<span class="string">'name'</span> , <span class="number">123</span>, <span class="number">10</span>, <span class="string">'/'</span>, <span class="string">'.miaohealth.net'</span>, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="获取cookie"><a href="#获取cookie" class="headerlink" title="获取cookie"></a>获取cookie</h3><p>获取cookie的值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 获取cookie值</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="variable">name</span></span></span></span><br><span class="line"><span class="comment">* <span class="doctag">@returns <span class="type">&#123;*&#125;</span></span></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">window</span>.$getCookie(name)</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取上例中存的cookie</span></span><br><span class="line"><span class="built_in">window</span>.$getCookie(<span class="string">'name'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="清除cookie"><a href="#清除cookie" class="headerlink" title="清除cookie"></a>清除cookie</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>cookie的名字组成的数组</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>open_appid行业客户id</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">window</span>.$clearCookie([], open_appid)</span><br></pre></td></tr></table></figure>
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/script/doc.js"></script>
+
+    
+
+  </body>
+</html>
