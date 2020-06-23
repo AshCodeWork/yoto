@@ -31,5 +31,5 @@ nav_order: 2
 | justify_content_end | 水平向后分布 |
 | justify_content_center | 水平居中分布 |
 | justify_content_around | 水平均匀分布 |
-| align_items_center | 水平均匀分布 |
+| align_items_center | 纵向居中分布 |
 | border-radius | 圆角 |

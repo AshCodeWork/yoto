@@ -7,19 +7,31 @@ nav_order: 4
 
 # 尺寸样式
 
+尺寸样式配置在`src/assets/size.scss`样式文件中。用于定义尺寸的变量和一些尺寸相关的全局样式。
+
+## 文字大小
+
+|class名| 功能 |
+|:---|:---|
+| f16 | font-size: rem(16) |
+| f20 | font-size: rem(20) |
+| f22 | font-size: rem(22) |
+| f24 | font-size: rem(24) |
+| f26 | font-size: rem(26) |
+| f28 | font-size: rem(28) |
+| f30 | font-size: rem(30) |
+| f32 | font-size: rem(32) |
+| f34 | font-size: rem(34) |
+| f36 | font-size: rem(36) |
+| f38 | font-size: rem(38) |
+
 ## margin
 
 |class名| 功能 |
 |:---|:---|
-| mr10 | margin-right:10px |
-| mr20 | margin-right:20px |
-| mr30 | margin-right:30px |
-| mb10 | margin-bottom:10px |
-| mb20 | margin-bottom:20px |
-| mb30 | margin-bottom:30px |
-| ml10 | margin-left:10px |
-| ml20 | margin-left:20px |
-| ml30 | margin-left:30px |
+| mb10 | margin-bottom: rem(10) |
+| mb20 | margin-bottom: rem(20) |
+| mb30 | margin-bottom: rem(30) |
 
 ## 高度
 

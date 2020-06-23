@@ -1,6 +1,6 @@
 {
   "logo": {
-    "text": "Hexo Doc Theme Seed",
+    "text": "Yoto Document",
     "type": "link",
     "path": "index.html"
   },
@@ -103,6 +103,53 @@
           "type": "link",
           "path": "style/size.html"
         },
+        {
+          "text": "rem功能",
+          "type": "link",
+          "path": "style/rem.html"
+        },
+      ]
+    },
+    {
+      "text": "filter过滤器",
+      "type": "label",
+      "children": [
+        {
+          "text": "规则说明",
+          "type": "link",
+          "path": "filters/index.html"
+        },
+        {
+          "text": "日期转换",
+          "type": "link",
+          "path": "filters/date.html"
+        },
+        {
+          "text": "价格转换",
+          "type": "link",
+          "path": "filters/currency.html"
+        },
+      ]
+    },
+    {
+      "text": "全局指令",
+      "type": "label",
+      "children": [
+        {
+          "text": "loading指令",
+          "type": "link",
+          "path": "directives/loading.html"
+        },
+        {
+          "text": "blur指令",
+          "type": "link",
+          "path": "directives/blur.html"
+        },
+        {
+          "text": "add-event指令",
+          "type": "link",
+          "path": "directives/countly.html"
+        },
       ]
     },
     {
@@ -110,11 +157,6 @@
       "type": "label",
       "link": "ui-components/index.html",
       "children": [
-        # {
-        #   "text": "window上的全局方法",
-        #   "type": "link",
-        #   "path": "ui-components/window.html"
-        # },
       ]
     },
   ]

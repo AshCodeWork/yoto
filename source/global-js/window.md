@@ -25,6 +25,14 @@ window.Global.deviceType //返回  1 苹果 2 安卓
 ```
 返回当前的设备类型：1 苹果 2 安卓
 
+### 换肤
+
+通过导入全局的css样式文件，可以动态更改样式
+```js
+//通过传入cssurl地址插入css样式
+window.Global.changeSkin(cssUrl)
+```
+
 ## $开头的方法
 
 ### window.$getHashUrlQuery
@@ -91,7 +99,7 @@ window.$timer.setInterval(()=> {
 }, 1000)
 ```
 
-### 设置setTimeoutl定时器
+### 设置setTimeout定时器
 
 使用方式同原生的一样，接受两个参数: 参数一：回掉方法，参数二，定时时长(ms)；返回这个定时器的key
 
@@ -169,3 +177,4 @@ window.$getCookie('name')
 */
 window.$clearCookie([], open_appid)
 ```
+

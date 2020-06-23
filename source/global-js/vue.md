@@ -56,3 +56,17 @@ this.request
         console.log(err)
     })
 ```
+## 埋点部分
+
+### $countlyAddEvent
+
+埋点提交。通过调用这个方法可以上报一个埋点事件。详情见埋点
+
+```js
+/**
+ * eventName 事件名称 String
+ * args 事件携带的参数 Object
+ * count 数量 Number
+*/
+this.$countlyAddEvent(eventName, args, count)
+```
