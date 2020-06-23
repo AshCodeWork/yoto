@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+
+    <title>Yoto document | filters说明 </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/yoto/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/yoto/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"filters说明","path":"filters/index.html"},"data":{"navigation":{"logo":{"text":"Yoto Document","type":"link","path":"index.html"},"main":[{"text":"欢迎使用Yoto","type":"label","children":[{"text":"介绍","type":"link","path":"introduce/index.html"},{"text":"关于","type":"link","path":"introduce/about.html"}]},{"text":"全局js","type":"label","link":"global-js/index.html","children":[{"text":"window上的全局方法","type":"link","path":"global-js/window.html"},{"text":"vue上的全局方法","type":"link","path":"global-js/vue.html"}]},{"text":"request请求","type":"label","link":"request/index.html","children":[{"text":"get请求","type":"link","path":"request/get.html"},{"text":"post请求","type":"link","path":"request/post.html"},{"text":"proxy代理设置","type":"link","path":"request/proxy.html"}]},{"text":"全局样式","type":"label","link":"style/index.html","children":[{"text":"global样式","type":"link","path":"style/global.html"},{"text":"flex样式","type":"link","path":"style/flex.html"},{"text":"尺寸样式","type":"link","path":"style/size.html"},{"text":"rem功能","type":"link","path":"style/rem.html"}]},{"text":"filter过滤器","type":"label","children":[{"text":"规则说明","type":"link","path":"filters/index.html"},{"text":"日期转换","type":"link","path":"filters/date.html"},{"text":"价格转换","type":"link","path":"filters/currency.html"}]},{"text":"全局指令","type":"label","children":[{"text":"loading指令","type":"link","path":"directives/loading.html"},{"text":"blur指令","type":"link","path":"directives/blur.html"},{"text":"add-event指令","type":"link","path":"directives/countly.html"}]},{"text":"UI组件","type":"label","link":"ui-components/index.html","children":[]}]}},"config":{"timezone":"UTC","root":"/yoto/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/yoto/index.html" class="doc-navbar__logo"><img src="/yoto/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Yoto Document</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="filters说明"><a href="#filters说明" class="headerlink" title="filters说明"></a>filters说明</h1><p>filters文档中写的是自带的全局过滤器。根据实际业务需求肯定还要增加新的过滤器。</p>
+<h2 id="全局过滤器定义"><a href="#全局过滤器定义" class="headerlink" title="全局过滤器定义"></a>全局过滤器定义</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>全局过滤器都定义在<code>src/assets/js/filters</code>这个文件夹。在这个文件下下创建filter对应的js文件。我们假设叫<code>double.js</code>，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// double.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num * <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>将上一步新建的filter文件引入到该文件夹中<code>index.js</code>内并导出。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以double为例</span></span><br><span class="line"><span class="comment">// 引入：</span></span><br><span class="line"><span class="keyword">import</span> double <span class="keyword">from</span> <span class="string">'./double.js'</span></span><br><span class="line"><span class="comment">// 导出：</span></span><br><span class="line"><span class="keyword">export</span> &#123; double &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在<code>main.js</code>中引入,并使用<code>Vue.filter</code>注册。具体参考其他的全局filter。</p>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/yoto/script/doc.js"></script>
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+
+    <title>Yoto document | 日期转换 </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/yoto/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/yoto/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"日期转换","path":"filters/date.html"},"data":{"navigation":{"logo":{"text":"Yoto Document","type":"link","path":"index.html"},"main":[{"text":"欢迎使用Yoto","type":"label","children":[{"text":"介绍","type":"link","path":"introduce/index.html"},{"text":"关于","type":"link","path":"introduce/about.html"}]},{"text":"全局js","type":"label","link":"global-js/index.html","children":[{"text":"window上的全局方法","type":"link","path":"global-js/window.html"},{"text":"vue上的全局方法","type":"link","path":"global-js/vue.html"}]},{"text":"request请求","type":"label","link":"request/index.html","children":[{"text":"get请求","type":"link","path":"request/get.html"},{"text":"post请求","type":"link","path":"request/post.html"},{"text":"proxy代理设置","type":"link","path":"request/proxy.html"}]},{"text":"全局样式","type":"label","link":"style/index.html","children":[{"text":"global样式","type":"link","path":"style/global.html"},{"text":"flex样式","type":"link","path":"style/flex.html"},{"text":"尺寸样式","type":"link","path":"style/size.html"},{"text":"rem功能","type":"link","path":"style/rem.html"}]},{"text":"filter过滤器","type":"label","children":[{"text":"规则说明","type":"link","path":"filters/index.html"},{"text":"日期转换","type":"link","path":"filters/date.html"},{"text":"价格转换","type":"link","path":"filters/currency.html"}]},{"text":"全局指令","type":"label","children":[{"text":"loading指令","type":"link","path":"directives/loading.html"},{"text":"blur指令","type":"link","path":"directives/blur.html"},{"text":"add-event指令","type":"link","path":"directives/countly.html"}]},{"text":"UI组件","type":"label","link":"ui-components/index.html","children":[]}]}},"config":{"timezone":"UTC","root":"/yoto/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><a href="/yoto/index.html" class="doc-navbar__logo"><img src="/yoto/images/logo.png" class="doc-navbar__logo__img"><span class="doc-navbar__logo__text">Yoto Document</span></a><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="日期转换"><a href="#日期转换" class="headerlink" title="日期转换"></a>日期转换</h1><p>使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; timestamp | date <span class="string">"%T"</span> &#125;&#125; <span class="comment">//13:17:24</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用示例"><a href="#常用示例" class="headerlink" title="常用示例"></a>常用示例</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; Date.now() | date(%T) &#125;&#125;  =&gt; '13:34:36'</span><br><span class="line">&#123;&#123; 'Wed Jan 20 2016 13:34:36 GMT+0800' | date (%T) &#125;&#125; =&gt; '13:34:36'</span><br><span class="line">&#123;&#123; 1453268193752 | date (%Y-%m-%d) &#125;&#125; =&gt; '2016-01-20'</span><br><span class="line">&#123;&#123; new Date | date (%I:%M:%s %p) &#125;&#125; =&gt; '1:39:22 PM'</span><br></pre></td></tr></table></figure>
+<h2 id="更多参数如下"><a href="#更多参数如下" class="headerlink" title="更多参数如下"></a>更多参数如下</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">param</th>
+<th style="text-align:left">explanation</th>
+<th style="text-align:left">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">%a</td>
+<td style="text-align:left">工作日的缩写。</td>
+<td style="text-align:left">Sat</td>
+</tr>
+<tr>
+<td style="text-align:center">%A</td>
+<td style="text-align:left">工作日全名。</td>
+<td style="text-align:left">Tuesday</td>
+</tr>
+<tr>
+<td style="text-align:center">%b</td>
+<td style="text-align:left">缩写的月份名称。</td>
+<td style="text-align:left">Jan</td>
+</tr>
+<tr>
+<td style="text-align:center">%B</td>
+<td style="text-align:left">月份全称</td>
+<td style="text-align:left">January</td>
+</tr>
+<tr>
+<td style="text-align:center">%c</td>
+<td style="text-align:left">首选的本地日期和时间表示</td>
+<td style="text-align:left">Tue Apr 22 11:16:09</td>
+</tr>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:left">每月的某天，零填充（01、02、03等）。</td>
+<td style="text-align:left">04</td>
+</tr>
+<tr>
+<td style="text-align:center">%-d</td>
+<td style="text-align:left">每月的某天，而不是零填充（1、2、3等）。</td>
+<td style="text-align:left">4</td>
+</tr>
+<tr>
+<td style="text-align:center">%D</td>
+<td style="text-align:left">格式化日期（dd / mm / yy）。</td>
+<td style="text-align:left">04/22/14</td>
+</tr>
+<tr>
+<td style="text-align:center">%e</td>
+<td style="text-align:left">每月的某天，空白填充（1、2、3等）。</td>
+<td style="text-align:left">3</td>
+</tr>
+<tr>
+<td style="text-align:center">%F</td>
+<td style="text-align:left">以ISO 8601格式（yyyy-mm-dd）返回日期。</td>
+<td style="text-align:left">2014-04-22</td>
+</tr>
+<tr>
+<td style="text-align:center">%H</td>
+<td style="text-align:left">一天中的小时，24小时制（00-23）。</td>
+<td style="text-align:left">15</td>
+</tr>
+<tr>
+<td style="text-align:center">%I</td>
+<td style="text-align:left">一天中的小时，12小时制（1-12）。</td>
+<td style="text-align:left">7</td>
+</tr>
+<tr>
+<td style="text-align:center">%j</td>
+<td style="text-align:left">一年中的某天（001-366）。</td>
+<td style="text-align:left">245</td>
+</tr>
+<tr>
+<td style="text-align:center">%k</td>
+<td style="text-align:left">一天中的小时，24小时制（1-24）。</td>
+<td style="text-align:left">14</td>
+</tr>
+<tr>
+<td style="text-align:center">%m</td>
+<td style="text-align:left">一年中的月份（01-12）。</td>
+<td style="text-align:left">04</td>
+</tr>
+<tr>
+<td style="text-align:center">%M</td>
+<td style="text-align:left">分钟（00-59）。</td>
+<td style="text-align:left">53</td>
+</tr>
+<tr>
+<td style="text-align:center">%p</td>
+<td style="text-align:left">子午线指示器（AM / PM）。</td>
+<td style="text-align:left">PM</td>
+</tr>
+<tr>
+<td style="text-align:center">%r</td>
+<td style="text-align:left">12小时时间（％I：％M：％S％p）</td>
+<td style="text-align:left">03:20:07 PM</td>
+</tr>
+<tr>
+<td style="text-align:center">%R</td>
+<td style="text-align:left">24小时制（％H：％M）</td>
+<td style="text-align:left">15:21</td>
+</tr>
+<tr>
+<td style="text-align:center">%T</td>
+<td style="text-align:left">24小时制（％H：％M：％S）</td>
+<td style="text-align:left">15:22:13</td>
+</tr>
+<tr>
+<td style="text-align:center">%U</td>
+<td style="text-align:left">当年的星期数，从第一个星期日的第一个星期日开始。</td>
+<td style="text-align:left">16</td>
+</tr>
+<tr>
+<td style="text-align:center">%W</td>
+<td style="text-align:left">当年的星期数，从第一个星期一作为第一个星期的第一天开始。</td>
+<td style="text-align:left">16</td>
+</tr>
+<tr>
+<td style="text-align:center">%w</td>
+<td style="text-align:left">星期几（0-6，星期日为0）。</td>
+<td style="text-align:left">2</td>
+</tr>
+<tr>
+<td style="text-align:center">%x</td>
+<td style="text-align:left">首选仅代表日期，没有时间。（mm / dd / yy）。</td>
+<td style="text-align:left">04/22/14</td>
+</tr>
+<tr>
+<td style="text-align:center">%X</td>
+<td style="text-align:left">时间的首选表示形式。（hh：mm：ss）。</td>
+<td style="text-align:left">13:17:24</td>
+</tr>
+<tr>
+<td style="text-align:center">%y</td>
+<td style="text-align:left">没有世纪的年份（00.99）。</td>
+<td style="text-align:left">14</td>
+</tr>
+<tr>
+<td style="text-align:center">%Y</td>
+<td style="text-align:left">一百年的一年。</td>
+<td style="text-align:left">2014</td>
+</tr>
+</tbody>
+</table>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/yoto/script/doc.js"></script>
+
+    
+
+  </body>
+</html>
