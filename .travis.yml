@@ -8,7 +8,7 @@ branches:
     - doc # build master branch only
 script:
   - cd themes/doc && npm install --prod
-  - cd ..
+  - cd ../../
   - hexo generate # generate static files
 deploy:
   provider: pages
